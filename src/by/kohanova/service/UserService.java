@@ -5,6 +5,4 @@ import java.util.List;
 
 public interface UserService {
 	List<User> findAll();
-
-	User findUserByName(String name);
 }
