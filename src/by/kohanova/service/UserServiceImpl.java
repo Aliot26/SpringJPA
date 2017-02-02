@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import by.kohanova.model.User;
 import by.kohanova.repository.UserRepository;
 
+/**
+ * UserService interface implementation
+ */
 @Service()
 public class UserServiceImpl implements UserService {
 
@@ -21,5 +24,10 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public List<User> findAll() {
 		return userRepository.findAll();
+	}
+
+	@Override
+	public User findUserByName(String name) {
+		return userRepository.findUserByName(name);
 	}
 }
