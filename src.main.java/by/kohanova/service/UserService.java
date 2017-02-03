@@ -1,7 +1,8 @@
 package by.kohanova.service;
 
-import by.kohanova.model.User;
 import java.util.List;
+
+import by.kohanova.model.User;
 
 public interface UserService {
 	/**
