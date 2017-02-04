@@ -21,13 +21,13 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	final static Logger logger = LoggerFactory.getLogger(UserController.class.getName());
+	final static Logger logger = LoggerFactory.getLogger(UserController.class);
 
 	/**
-	 * Is used for defining incoming request url with part "/hello/"
+	 * Is used for defining incoming request url with part "/hello"
 	 * @return greeting string
 	 */
-	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	@RequestMapping("/hello")
 	public String hello() {
 		logger.info("Start hello method");
 		String hello = "Hello Spring! It was written by Olga";
@@ -38,7 +38,7 @@ public class UserController {
 	 * Is used for getting list of users
 	 * @return list of users
 	 */
-	@RequestMapping(value = "/users", method = RequestMethod.GET)
+	@RequestMapping("/users")
 	public List<User> getUsers() {
 		logger.info("Start getUsers method");
 		List<User> listOfUsers = userService.findAll();			
